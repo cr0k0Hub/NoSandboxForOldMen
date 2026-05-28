@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="NoSandboxForOldMen/NoSandboxForOldMen.vcxproj" Id="6a5ace0c-70fd-4c65-af81-7c961e766456" />
+</Solution>
