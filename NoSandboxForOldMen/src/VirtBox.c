@@ -62,9 +62,16 @@ BOOL CheckVirtualBoxFiles() {
 	return FALSE;
 }
 
+BOOL CheckVirtualBoxServices() {
+	if (EnumServices(VirtualBoxServices, 6)) return TRUE;
+
+	return FALSE;
+}
+
 BOOL CheckVirtualBoxInfo() {
 	if (CheckVirtualBoxRegKeys()) return TRUE;
 	if (CheckVirtualBoxFiles()) return TRUE;
+	if (CheckVirtualBoxServices()) return TRUE;
 
 	return FALSE;
 }

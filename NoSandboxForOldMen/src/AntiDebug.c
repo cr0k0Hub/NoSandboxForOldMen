@@ -30,7 +30,7 @@ BOOL AntiDebug() {
 	if (peb->BeingDebugged) return TRUE;
 
 	GetCpuId();
-	//if (CheckRegistry()) return TRUE;
+	if (CheckRegistry()) return TRUE;
 	if (CheckVirtualBoxInfo()) return TRUE;
 
 	return FALSE;
