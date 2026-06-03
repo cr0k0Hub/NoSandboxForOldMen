@@ -20,7 +20,7 @@
 |:---|:---|:---|
 | **VirtualBox: Реестр** | ✅ Реализовано | Поиск ключей `HKLM\SOFTWARE\Oracle\VirtualBox Guest Additions` и служб VBox в `CurrentControlSet\Services` |
 | **VirtualBox: Файлы** | ✅ Реализовано | Поиск драйверов и библиотек VirtualBox в `System32` и `drivers` |
-| **VirtualBox: Службы** | 🔧 В разработке | Проверка запущенных служб (`VBoxService`, `VBoxGuest` и др.) через SCM |
+| **VirtualBox: Службы** | ✅ Реализовано | Проверка запущенных служб (`VBoxService`, `VBoxGuest` и др.) через SCM |
 | **VirtualBox: Процессы** | 🔧 В разработке | Поиск процессов `VBoxTray.exe`, `VBoxService.exe` |
 | **Отладка: PEB** | ✅ Реализовано | Проверка флага `BeingDebugged` через прямое чтение PEB (`__readgsqword(0x60)`) |
 | **Отладка: IsDebuggerPresent** | ✅ Реализовано | Классическая проверка WinAPI (для проформы) |
@@ -42,7 +42,7 @@ NoSandboxForOldMen/
 ## 📜 Дальнейшие планы
   - Проверки для VMware (реестр, файлы, службы)
   - Проверки для QEMU/KVM
-  - Проверка служб и процессов VirtualBox
+  - Проверка процессов
   - Обфускация строк
   - Добавление обхода поведенческого анализа
   - Добавление хеширования апи

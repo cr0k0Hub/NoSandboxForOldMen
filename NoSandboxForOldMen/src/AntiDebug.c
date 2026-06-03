@@ -24,12 +24,12 @@ BOOL CheckRegistry() {
 }
 
 BOOL AntiDebug() {
-	//if (IsDebuggerPresent()) return TRUE;
+	if (IsDebuggerPresent()) return TRUE;
 
-	//PPEB peb = (PPEB)__readgsqword(0x60);
-	//if (peb->BeingDebugged) return TRUE;
+	PPEB peb = (PPEB)__readgsqword(0x60);
+	if (peb->BeingDebugged) return TRUE;
 
-	//GetCpuId();
+	GetCpuId();
 	//if (CheckRegistry()) return TRUE;
 	if (CheckVirtualBoxInfo()) return TRUE;
 

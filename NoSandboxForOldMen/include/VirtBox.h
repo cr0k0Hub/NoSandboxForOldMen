@@ -18,7 +18,5 @@ extern const char* VirtualBoxFiles[9];
 
 BOOL CheckVirtualBoxRegKeys();
 BOOL CheckVirtualBoxFiles();
-BOOL CheckVirtualBoxServices();
-BOOL CheckVirtualBoxProcesses();
 
 BOOL CheckVirtualBoxInfo();

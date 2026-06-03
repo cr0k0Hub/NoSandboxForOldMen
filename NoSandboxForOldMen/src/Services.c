@@ -26,7 +26,6 @@ BOOL ServiceExist(const char* serviceName) {
     if (service) {
         exist = TRUE;
     }
-
     CloseServiceHandle(scm);
 
     return exist;
