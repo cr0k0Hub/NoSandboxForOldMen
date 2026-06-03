@@ -3,6 +3,9 @@
 #include <windows.h>
 #include "Files.h"
 #include "Reg.h"
+#include "Services.h"
+#include "Processes.h"
+
 /*
 * [ VirtBox ]
 * contains VirtualBox-specific data
@@ -15,5 +18,7 @@ extern const char* VirtualBoxFiles[9];
 
 BOOL CheckVirtualBoxRegKeys();
 BOOL CheckVirtualBoxFiles();
+BOOL CheckVirtualBoxServices();
+BOOL CheckVirtualBoxProcesses();
 
 BOOL CheckVirtualBoxInfo();

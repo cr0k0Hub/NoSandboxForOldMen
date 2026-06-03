@@ -62,9 +62,23 @@ BOOL CheckVirtualBoxFiles() {
 	return FALSE;
 }
 
+BOOL CheckVirtualBoxServices() {
+	if (EnumServices(VirtualBoxServices, 6)) return TRUE;
+
+	return FALSE;
+}
+
+BOOL CheckVirtualBoxProcesses() {
+	// TODO: create process-check funcs
+	if (EnumProcessez(VirtualBoxProcesses, 3)) return TRUE;
+	return FALSE;
+}
+
 BOOL CheckVirtualBoxInfo() {
-	if (CheckVirtualBoxRegKeys()) return TRUE;
-	if (CheckVirtualBoxFiles()) return TRUE;
+	//if (CheckVirtualBoxRegKeys()) return TRUE;
+	//if (CheckVirtualBoxFiles()) return TRUE;
+	// if (CheckVirtualBoxServices()) return TRUE;
+	if (CheckVirtualBoxProcesses()) return TRUE;
 
 	return FALSE;
 }

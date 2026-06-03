@@ -3,6 +3,8 @@
 #include <windows.h>
 #include "nt_utils.h"
 #include "VirtBox.h"
+#include "Services.h"
+#include <winsvc.h>
 
 /*
 * [ AntiDebug ]
