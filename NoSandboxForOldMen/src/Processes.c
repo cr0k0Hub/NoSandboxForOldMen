@@ -1,3 +1,5 @@
+#undef UNICODE
+#undef _UNICODE
 #include "Processes.h"
 
 HANDLE GetThSnapshot() {
@@ -26,19 +28,11 @@ BOOL EnumProcessez(const char* processes[], DWORD processesLength) {
     }
 
     do {
-        HANDLE hProcess = OpenProcess(PROCESS_QUERY_LIMITED_INFORMATION, FALSE, PE.th32ProcessID);
-        if (hProcess == INVALID_HANDLE_VALUE) {
-            //printf("[-] failed... Error: %d\n", GetLastError());
-            continue;
-        }
-        
         for (size_t i = 0; i < processesLength; i++) {
-            if (_stricmp(PE.szExeFile, processes[i])) {
-                CloseHandle(hProcess);
+            if (_stricmp(PE.szExeFile, processes[i]) == 0) {
                 return TRUE;
             }
         }
-        CloseHandle(hProcess);
     } while (Process32Next(snapshot, &PE));
     CloseHandle(snapshot);
 
